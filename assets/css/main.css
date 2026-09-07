@@ -1,31 +1,18 @@
-*,
-::after,
-::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* Error: expected more input.
+ *   ,
+ * 4 | @forward 
+ *   |          ^
+ *   '
+ *   scss\base\_index.scss 4:10  @use
+ *   scss\main.scss 4:1          root stylesheet */
 
-html {
-    font-size: 62.5%;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected more input.\a   \2577 \a 4 \2502  @forward \d\a   \2502           ^\a   \2575 \a   scss\\base\\_index.scss 4:10  @use\a   scss\\main.scss 4:1          root stylesheet";
 }
-
-body {
-    font-size: 1.6rem;
-    font-family:
-        Roboto Condensed,
-        sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Open Sans",
-        "Helvetica Neue",
-        sans-serif;
-}
-
-/*# sourceMappingURL=main.css.map */
